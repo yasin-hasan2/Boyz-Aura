@@ -12,6 +12,8 @@ import { Menu, X } from "lucide-react";
 import SearchBar from "./SearchBar";
 import UserMenu from "./UserMenu";
 import ShoppingCart from "./ShoppingCart";
+import Image from "next/image";
+import logo from "../../images/Untitled_design2-removebg-preview.png";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,7 +66,17 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/" className="text-2xl font-playfair font-bold">
+            <Link
+              href="/"
+              className="text-2xl font-playfair font-bold flex items-center space-x-2 border  "
+            >
+              <Image
+                src={logo}
+                alt="Boyz Aura"
+                width={150}
+                height={50}
+                className="w-auto h-14 rounded-xl"
+              />
               Boyz Aura
             </Link>
           </motion.div>

@@ -47,16 +47,18 @@ export default function FeaturedProducts() {
             <SwiperSlide key={product.id}>
               <Card className="overflow-hidden">
                 <CardContent className="p-0">
-                  <img
+                  <Image
                     src={product.image || "/placeholder.svg"}
                     alt={product.name}
+                    width={400}
+                    height={400}
                     className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </CardContent>
                 <CardFooter className="flex flex-col items-start p-4">
                   <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
                   <p className="text-gray-600 mb-4">
-                    ${product.price.toFixed(2)}
+                    Tk {product.price.toFixed(2)} /-
                   </p>
                   <Button onClick={() => setQuickViewProduct(product)}>
                     Quick View

@@ -33,6 +33,13 @@ const products = [
     category: "accessories",
     image: "/placeholder.svg",
   },
+  {
+    id: 5,
+    name: "Panjabi",
+    price: 70.99,
+    category: "panjabi",
+    image: "/placeholder.svg",
+  },
   // Add more products...
 ];
 
@@ -80,7 +87,9 @@ export default function ProductGrid({ filters }) {
               </div>
               <div className="mt-4 text-center">
                 <h3 className="text-lg font-medium">{product.name}</h3>
-                <p className="text-gray-600">${product.price.toFixed(2)}</p>
+                <p className="text-gray-600">
+                  Tk {product.price.toFixed(2)} /-
+                </p>
               </div>
             </Link>
           </motion.div>

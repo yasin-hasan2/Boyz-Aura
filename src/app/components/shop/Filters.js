@@ -1,7 +1,15 @@
 import { Slider } from "@/components/ui/slider";
 
 export default function Filters({ filters, setFilters }) {
-  const categories = ["All", "T-Shirts", "Jackets", "Pants", "Accessories"];
+  const categories = [
+    "All",
+    "Panjabi",
+    "T-Shirts",
+    "Shirts",
+    "Jackets",
+    "Pants",
+    "Accessories",
+  ];
 
   return (
     <aside className="w-full md:w-64 space-y-6" data-aos="fade-right">
@@ -38,8 +46,8 @@ export default function Filters({ filters, setFilters }) {
           }
         />
         <div className="flex justify-between mt-2">
-          <span>${filters.priceRange[0]}</span>
-          <span>${filters.priceRange[1]}</span>
+          <span>Tk {filters.priceRange[0]} /-</span>
+          <span>Tk {filters.priceRange[1]} /-</span>
         </div>
       </div>
       <div>

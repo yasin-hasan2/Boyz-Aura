@@ -9,6 +9,8 @@ import SpecialOffers from "./components/SpecialOffers";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import FeaturedProducts from "./components/FeaturedProducts";
+import Subscription from "./home/Subscription";
+import ProductShowcase from "./home/ProductShowcase";
 
 export default function Home() {
   useEffect(() => {
@@ -22,8 +24,10 @@ export default function Home() {
     <main>
       <Hero />
       <CategoryHighlights />
+      <ProductShowcase />
       <SpecialOffers />
       <FeaturedProducts />
+      <Subscription />
       <Testimonials />
     </main>
   );

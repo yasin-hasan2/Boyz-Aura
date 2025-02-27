@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import BoyzAuraQR from "../../images/BoyzAura-QR.png";
 
 export default function Footer() {
   return (
@@ -10,6 +12,13 @@ export default function Footer() {
             <p>
               Elevate your style with our premium streetwear and accessories.
             </p>
+            <Image
+              src={BoyzAuraQR}
+              alt="Boyz Aura"
+              width={150}
+              height={50}
+              className="bg-white p-2 rounded-lg mt-4 shadow-xl"
+            />
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>

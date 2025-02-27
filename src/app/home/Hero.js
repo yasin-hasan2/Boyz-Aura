@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
+import Link from "next/link";
 
 const slides = [
   {
@@ -33,7 +34,7 @@ export default function Hero() {
       pagination={{ clickable: true }}
       autoplay={{ delay: 5000 }}
       loop
-      className="h-[80vh]"
+      className="h-[100vh]"
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>
@@ -52,9 +53,11 @@ export default function Hero() {
                   <h1 className="font-playfair text-5xl md:text-7xl font-bold">
                     {slide.subtitle}
                   </h1>
-                  <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition duration-300">
-                    Shop Now
-                  </button>
+                  <Link href="/shop">
+                    <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition duration-300">
+                      Shop Now
+                    </button>
+                  </Link>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
