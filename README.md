@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Boyz Aura - Modern Fashion E-commerce Website
 
-## Getting Started
+![Boyz Aura Logo](./src/app/favicon.ico)
 
-First, run the development server:
+Boyz Aura is a cutting-edge e-commerce platform specializing in men's fashion and streetwear. Built with Next.js and React, this website offers a seamless shopping experience with a focus on modern design and user engagement.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Responsive design for optimal viewing on all devices
+- Dynamic product catalog with filtering and sorting capabilities
+- User authentication and personalized accounts
+- Shopping cart functionality with real-time updates
+- Secure checkout process
+- Admin dashboard for inventory and order management
+- Interactive UI elements and smooth animations
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js](https://nextjs.org/) - React framework for server-side rendering and static site generation
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Framer Motion](https://www.framer.com/motion/) - Animation library for React
+- [shadcn/ui](https://ui.shadcn.com/) - Re-usable components built with Radix UI and Tailwind CSS
+- [Swiper](https://swiperjs.com/) - Modern mobile touch slider
+- [Lucide React](https://lucide.dev/) - Beautiful & consistent icon toolkit
