@@ -68,7 +68,7 @@ export default function Navbar() {
           >
             <Link
               href="/"
-              className="text-2xl font-playfair font-bold flex items-center space-x-2 border  "
+              className="text-2xl font-playfair font-bold flex items-center space-x-2   "
             >
               <Image
                 src={logo}

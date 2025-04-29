@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState } from "react";
@@ -18,34 +19,39 @@ const products = [
     id: 1,
     name: "Classic White Shirt",
     price: "$89.99",
-    image: "/product1.jpg",
+    image:
+      "https://i.pinimg.com/736x/f0/7e/72/f07e7261e18f48b02c1c201048be7064.jpg",
     badge: "Best Seller",
   },
   {
     id: 2,
     name: "Navy Chinos",
     price: "$69.99",
-    image: "/product2.jpg",
+    image:
+      "https://i.pinimg.com/736x/01/a4/84/01a484e21f7cf4278ebdff8e9f5d6d48.jpg",
     badge: "New Arrival",
   },
   {
     id: 3,
     name: "Beige Blazer",
     price: "$149.99",
-    image: "/product3.jpg",
+    image:
+      "https://i.pinimg.com/736x/f3/e3/da/f3e3da1513fa51e511f1537308ec443d.jpg",
   },
   {
     id: 4,
     name: "Green Polo Shirt",
     price: "$59.99",
-    image: "/product4.jpg",
+    image:
+      "https://i.pinimg.com/736x/49/c0/bc/49c0bcd4e84b1f32afff9a48b7dbd7b3.jpg",
     badge: "Sale",
   },
   {
     id: 5,
     name: "Khaki Pants",
     price: "$79.99",
-    image: "/product5.jpg",
+    image:
+      "https://i.pinimg.com/736x/11/e7/ed/11e7eda35fb2c433666920ea9adcca29.jpg",
   },
 ];
 
@@ -81,13 +87,23 @@ export default function ProductShowcase() {
                 <SwiperSlide key={product.id}>
                   <div className="relative w-full h-full flex flex-col md:flex-row">
                     <div className="w-full md:w-1/2 h-full">
-                      <Image
-                        src={product.image || "/placeholder.svg"}
-                        alt={product.name}
-                        width={400}
-                        height={400}
-                        className="w-full h-full object-cover"
-                      />
+                      {product.image?.startsWith("http") ? (
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          width={400}
+                          height={400}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <Image
+                          src={product.image || "/placeholder.svg"}
+                          alt={product.name}
+                          width={400}
+                          height={400}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
                     </div>
                     <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center bg-gray-50">
                       <h3 className="text-2xl md:text-3xl font-semibold mb-2">

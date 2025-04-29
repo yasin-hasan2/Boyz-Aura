@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { motion } from "framer-motion";
@@ -12,19 +13,22 @@ const heroSlides = [
   {
     title: "Summer Collection",
     subtitle: "Discover the latest trends",
-    image: "/hero-summer.jpg",
+    image:
+      "https://i.pinimg.com/736x/ad/0c/f6/ad0cf66505da57e3c66d2c3afa3a9884.jpg",
     color: "bg-yellow-100",
   },
   {
     title: "Urban Streetwear",
     subtitle: "Express your style",
-    image: "/hero-urban.jpg",
+    image:
+      "https://i.pinimg.com/736x/af/38/4e/af384e8e95bae53032ed488766f3f8fe.jpg",
     color: "bg-blue-100",
   },
   {
-    title: "Accessories",
+    title: "Men Accessories ",
     subtitle: "Complete your look",
-    image: "/hero-accessories.jpg",
+    image:
+      "https://i.pinimg.com/736x/65/28/a9/6528a9813d5d8d8dba6e30296ae8b855.jpg",
     color: "bg-green-100",
   },
 ];
@@ -37,7 +41,7 @@ export default function Hero() {
       pagination={{ clickable: true }}
       autoplay={{ delay: 5000 }}
       loop
-      className="h-[80vh]"
+      className="h-[90vh]"
     >
       {heroSlides.map((slide, index) => (
         <SwiperSlide key={index}>
@@ -65,13 +69,21 @@ export default function Hero() {
                   className="relative h-[500px]"
                 >
                   <div className="absolute inset-0 rounded-full bg-white/50 blur-3xl" />
-                  <Image
-                    src={slide.image || "/placeholder.svg"}
-                    alt={slide.title}
-                    height={500}
-                    width={500}
-                    className="relative z-10 w-full h-full object-cover object-center rounded-lg shadow-lg"
-                  />
+                  {slide.image.startsWith("http") ? (
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="relative z-10 w-full h-full object-cover object-center rounded-lg shadow-lg"
+                    />
+                  ) : (
+                    <Image
+                      src={slide.image}
+                      alt={slide.title}
+                      height={500}
+                      width={500}
+                      className="relative z-10 w-full h-full object-cover object-center rounded-lg shadow-lg"
+                    />
+                  )}
                 </motion.div>
               </div>
             </div>

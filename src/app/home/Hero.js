@@ -7,7 +7,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
-import Link from "next/link";
 
 const slides = [
   {
@@ -53,11 +52,9 @@ export default function Hero() {
                   <h1 className="font-playfair text-5xl md:text-7xl font-bold">
                     {slide.subtitle}
                   </h1>
-                  <Link href="/shop">
-                    <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition duration-300">
-                      Shop Now
-                    </button>
-                  </Link>
+                  <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition duration-300">
+                    Shop Now
+                  </button>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
